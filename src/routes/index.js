@@ -5,6 +5,7 @@ import product from './products';
 import { authenticateAuthToken } from '../middlewares/auth';
 
 const router = express.Router();
+router.get('/', async(req, res) => res.json('App is working fine.'));
 router.use('/auth', auth);
 router.use('/users', authenticateAuthToken, user);
 router.use('/products', product);
